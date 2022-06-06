@@ -3,7 +3,7 @@ package com.devmaster.user.controller;
 import com.devmaster.user.entity.User;
 import com.devmaster.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import model.UserWithDepartment;
+import com.devmaster.user.model.UserWithDepartment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

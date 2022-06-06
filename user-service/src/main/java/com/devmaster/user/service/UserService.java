@@ -3,8 +3,8 @@ package com.devmaster.user.service;
 import com.devmaster.user.entity.User;
 import com.devmaster.user.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
-import model.Department;
-import model.UserWithDepartment;
+import com.devmaster.user.model.Department;
+import com.devmaster.user.model.UserWithDepartment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -30,7 +30,7 @@ public class UserService {
         UserWithDepartment userWithDepartment = new UserWithDepartment();
         User user = userRepository.findByUserId(useId);
 
-        Department department = restTemplate.getForObject("http://localhost:9001/departments/" + user.getDepartmentId(),
+        Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/departments/" + user.getDepartmentId(),
                 Department.class);
 
         userWithDepartment.setUser(user);

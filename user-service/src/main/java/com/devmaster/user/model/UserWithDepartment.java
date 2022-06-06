@@ -1,4 +1,4 @@
-package model;
+package com.devmaster.user.model;
 
 import com.devmaster.user.entity.User;
 import lombok.AllArgsConstructor;
